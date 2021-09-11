@@ -1,0 +1,24 @@
+binary_sensor:
+- platform: mqtt
+name: ‘Front Door’
+unique_id : ‘detect.door.frnt’
+state_topic: “pi/doors/front”
+device_class: “door”
+payload_on: “1”
+payload_off: “0”
+
+- platform: mqtt
+name: ‘Back Door’
+unique_id : ‘detect.door.back’
+state_topic: “pi/doors/back”
+device_class: “door”
+payload_on: “1”
+payload_off: “0”
+
+- platform: mqtt
+name: ‘Shed Door’
+unique_id : ‘detect.door.shed’
+state_topic: “pi/doors/shed”
+device_class: “door”
+payload_on: “1”
+payload_off: “0”
