@@ -9,7 +9,7 @@
 The original plan was to use home assitant to send a message to my phone that the backdoor / shed was open. But that was too expensive, buying the app and such (for now) or it meant ended up having to program an app that went through Googles services, and having them know everytime my backdoor was left open... seemed... questionable 
 
 
-The setup is pretty straight forward, uses paho MQTT Client, to connect to the MQTT broker on Home Assistant. It has a delay and a simple switch so it doesn't spam Home Assistant that it is open / closed.
+The setup is pretty straight forward the code is extremely basic, uses paho MQTT Client, to connect to the MQTT broker on Home Assistant. It has a delay and a simple switch so it doesn't spam Home Assistant that it is open / closed.
 
 It will also turn on the LED's to say if the door is open or clsoed. One limitation if HassOS / Home Assistant restarts, The states / entities will be blank. Currently the MQTT isn't bi-directional -*Possible future fix later* Until the doors are open /closed again / the python script restarts.
 
@@ -27,6 +27,6 @@ But, this did worked perfectly for months without a need to restart anything, wa
 - Install ground pins to GPIO Pins 17, 27, 22, optionally install LED Power to Pins to GPIO Pins 24, 23, 18
 - Set the connection information for ip address, user, password.
 - You can use the publish strings I used, pi/doors/front or you can set your own
-- Start by typing python door-sensors.py
+- Start by typing python door-sensors.py (in the directory you installed)
 
 Note, GPIO Pins can be different depending on how the board is laid out / configutation used. (IE the GPIO.setmode(GPIO.BCM))
